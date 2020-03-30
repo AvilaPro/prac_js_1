@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/css1.css">
+    <title>General JS</title>
+</head>
+<body>
+    <div>
+        <label for="">Cambios de texto y atributos</label>
+        <div class="elem-inline">
+            <h2 id="ej1">Bienvenido a JS General</h2>
+            <img id="ej2" src="imgs/sw_off.PNG" alt="" onclick='document.getElementById("ej2").src="imgs/sw_on.PNG"'>
+        </div>
+        <div class="btn-inline">
+            <button onclick='document.getElementById("ej1").innerHTML="Cambio de texto"'>Cambiar texto</button>
+        </div>
+    </div>
+    <div>
+        <label for="">Probando la Keyword "typeof"</label>
+        <div class="elem-inline">
+            <h4>Ingrese letras o numeros en el siguiente input y retornara de que tipo de dato es</h4>
+            <input type="number" name="" id="input1">
+            <label for="" id="label1" style="display: none;" ></label>
+            <button onclick="ej1()">Ver tipo de dato</button>
+            <label>Validacion de tipo de dato con typeof (todos los datos de un input seran typeof = string</label>
+        </div>
+    </div>
+    <div>
+        <label for="">Usando una funcion para convertir grados Farenheit a Celsius</label>
+        <div class="elem-inline">
+            <h4>Ingrese el grado Farenheit a convertir:</h4>
+            <input type="number" name="" id="input2">
+            <label for="" id="label2" ></label>
+            <button onclick="ej2()">Convertir a Celsius</button>
+        </div>
+    </div>
+    <div>
+        <label for="">Probando la Keyword "length"</label>
+        <div class="elem-inline">
+            <h4>Ingrese una cadena de texto y se retornara su tamaño</h4>
+            <input type="text" name="" id="input3" placeholder="">
+            <label for="" id="label3" style="display: none;" ></label>
+            <button onclick="ej3()">Ver tamaño de texto</button>
+            <label>Se obtiene el tamaño de la cadena de texto</label>
+        </div>
+    </div>
+</body>
+<script src="js/js1.js"></script>
+</html>

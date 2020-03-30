@@ -1,0 +1,97 @@
+En tipos de datos hay:
+  -> number: que son los numeros;
+  -> string: que son los caracteres UTF-8;
+  -> array: que son arreglos instanciados de la siguiente forma = ["cosa1", "cosa2"]; Se ordenan de forma numerica empezando por el elemento [0] que es el primer elemento del arreglo.
+  -> object: que son objetos instanciados de la siguiente forma = {nombre:"Eduardo", apellido:"Mejias", edad:32}; No se ordena de forma numerica si que cada elemento del objeto se conoce como propiedad o como metodo y se asigna su valor como sigue = propiedad:valor O metodo : function(){return operacion}.
+  Como vemos los metodos son almacenados como una propiedad mas.
+  -> undefined: es el tipo de dato "indefinido" y es el valor por defecto de toda variable que no tiene un valor asignado.
+  -> null: es el tipo de dato de "nada" es la devolucion de una variable que no exista. Sin embargo a una variable podemos asignarle el valor null y su typeof sera "object". Esto es muy raro pero es propio de JavaScript.
+  Nota: typeof de object, array y null devolvera = object. Porque? Porque en JavaScript los array son objetos.
+--------------------------------------
+Funciones en JavaScript:
+  Los parámetros de la función se enumeran entre paréntesis () en la definición de la función.
+
+  Los argumentos de función son los valores recibidos por la función cuando se invoca.
+
+  Dentro de la función, los argumentos (los parámetros) se comportan como variables locales.
+------------------------------------
+Nota sobre los objetos:
+¡No declare cadenas, números y booleanos como objetos!
+Cuando se declara una variable de JavaScript con la palabra clave " new", la variable se crea como un objeto:
+
+var x = new String();        // Declares x as a String object
+var y = new Number();        // Declares y as a Number object
+var z = new Boolean();       // Declares z as a Boolean object
+
+Evitar String, Number y Boolean objetos. Complican su código y ralentizan la velocidad de ejecución.
+-----------------------------------
+Eventos de JavaScript
+  Los eventos de Html son cosas que le suceden a los elementos HTML.
+  Cuando JavaScript es usado en paginas HTML JavaScript puede reaccionar a dichos eventos.
+----------------------------------
+String (str)
+  Para conocer el tamaño de una cadena (string) se usa la propiedad "length".
+  Para introducir comillas dentro de una cadena (string) se usa es caracter de Escape " \ " porque sino los caracteres que esten dentro de esa segunda secuencia de comillas no aparecera.
+  Ej: "se cree que las esferas "albondigas" de carne", la cadena se cortara hasta: se cree que las esferas. Para evitar que esto suceda se usa el caracter de Escape: "se cree que las esferas \"albondigas\" de carne", para que pueda ser introducido el caracter de las dobles comillas (en este caso) dentro de la cadena de texto.
+Strings Methods
+  ->indexOf("subString", inicialPosition:number): Muestra la primera ocurrencia de la palabra en el string y nos dice su posicion [tenga en cuenta que las posiciones empiezan en 0], ademas se le puede pasar un parametro que indica desde donde se puede inciar la busqueda en el string. :: str.indexOf("palabra"):number.
+  ->lastIndexOf(): Muestra la ultima ocurrencia de la palabra en el string y nos dice su posicion :: str.lastIndexOf("palabra"):number.
+  ->search(): Muestra la primera ocurrencia de la palabra en el string y nos dice su posicion :: str.search("palabra"):number.
+  NOTA: indexOf y search son muy similares pero se diferencian en que uno recibe parametros y otro no.
+  ->slice(init:number, end:number) : Extrae una parte de texto de una cadena [los parametros indican donde comienza y donde termina el texto a ser extraido][tenga en cuenta que el caracter que este ubicado en el parametro end no sera extraido] [El parametro se puede introducir con numeros negativos, esto indicara que el indice empezara a contar desde el final de la cadena hacia la izquierda] :: str.slice(1, 2):number.
+  ->substring(init:number, end:number) : Extrae una parte de texto de una cadena [el primer parametro es donde inicia el subString] [el segundo parametro es el length del subString a extraer][el primer parametro puede ser negativo y esto indicara que empieza en el final del string hacia la izquierda] : str.substring(7, 6):number
+  ->replace("sbstr1", "sbstr2") : Sustituye un substring de la cadena. [el primer parametro indica la palabra a ser sustituida][el segundo parametro es la palabra a ser ingresada][Este metodo es sensible a las mayusculas, la primera palabra debe ser escrita tal cual como se encuentra en el string] :: str.replace("acambiar", "aingresar").
+  ->toLowerCase() : Convierte el string a minusculas :: str.toLowerCase().
+  ->toUpperCase() : Convierte el string a mayusculas :: str.toUpperCase().
+  ->concat("separador", texto) : Concatena a un string adjuntando el texto al final del string previamente antecedido por el separador comunmente usado un espacio.
+  ->trim() : Este método elimina los espacios en blanco de ambos lados de una cadena :: str.trim().
+  ->charAt(indice:number) : método devuelve el carácter en un índice (posición) especificado en una cadena :: str.charAt(0).
+  ->charCodeAt(indice:number) : método devuelve el unicode del carácter en un índice especificado en una cadena. [El método devuelve un código UTF-16 (un entero entre 0 y 65535)] :: str.charCodeAt(0):UTF-16
+  NOTA: Gracias a ES-5 se puede acceder al caracter de una cadena en su posicion usando corchetes [Si no se encuentra ningún carácter, [] devuelve undefined] [Si no se encuentra ningún carácter, charAt() devuelve una cadena vacía]:: str[0]:string
+  NOTA: Se puede convertir una cadena (string) en un array, con el uso de split().
+  ->split("separador") : Convierte un string en un array. [Se usa el parametro separador para saber de que forma se identifican cada uno de los elementos del array. Si no se incluye un separador el metodo tomara todo el string y lo convertira en un array con un solo indice] :: str.splice(" "):array.
+--------------------------------
+Numbers
+  JavaScript tiene solo un tipo de número. Los números se pueden escribir con o sin decimales
+    3
+    3.14
+  Los números extra grandes o extra pequeños se pueden escribir con notación científica (exponente):
+    123e5
+    123e-5
+  Los enteros tienen una precision de hasta 15 digitos.
+  El número máximo de decimales es 17, pero la aritmética de coma flotante no siempre es 100% precisa:
+    var x = 0.2 + 0.1; // x will be 0.30000000000000004
+  NOTA: recuerde que en JavaScript el caracter "+" es usado tanto para la suma como para la concatenacion de caracteres. Asi que si usa dos numeros el devolvera numeros pero si uno de los elementos es string el resultado sera un string.
+  NOTA: JavaScript intentará convertir cadenas en números en todas las operaciones numéricas, siempre y cuando el simbolo de operacion no sea el signo "+".
+    var x = "100";
+    var y = "10";
+    var z = x / y; // z will be 10
+    Pero:
+    var x = "100";
+    var y = "10";
+    var z = x + y; // z will be 10010
+  ->NaN : es una palabra reservada de JavaScript que indica que un número no es un número.
+  Intentar hacer aritmética con una cadena no numérica dará como resultado NaN.
+  NaN es un numero. Si hacemos typeof NaN : number. Sin embargo no se puede operar con el. Es decir si intentamos:
+    var x = NaN;
+    var y = 5;
+    var z = x + y; //z sera un NaN
+  Y como ya sabemos si intentamos concatenar un number con un string el resultado sera un string:
+    var x = NaN;
+    var y = "5";
+    var z = x + y; //z sera NaN5
+  ->Infinity : o -Infinity : es el valor que JavaScript devolverá si calcula un número fuera del número más grande posible. [La division por cero devolvera Infinity].
+  Infinity es un number. typeof Infinity : number
+  ->Hexadecimal : JavaScript interpreta las constantes numéricas como hexadecimales si van precedidas por 0x
+    Nunca escriba un número con un cero a la izquierda (como 07).
+    Algunas versiones de JavaScript interpretan los números como octales si están escritos con un cero a la izquierda.
+    Por defecto, JavaScript muestra los números como decimales base 10 .
+    Pero puede usar el toString()método para generar números de la base 2 a la base 36 .
+    Hexadecimal es la base 16 . Decimal es base 10 . Octal es la base 8 . Binario es base 2 .
+      var myNumber = 32;
+      myNumber.toString(10);  // returns 32
+      myNumber.toString(32);  // returns 10
+      myNumber.toString(16);  // returns 20
+      myNumber.toString(8);   // returns 40
+      myNumber.toString(2);   // returns 100000
+---Vamos en Number Methods

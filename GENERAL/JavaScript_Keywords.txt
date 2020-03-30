@@ -1,0 +1,77 @@
+JavaScript      Keywords
+Keyword	        Description
+break	        Terminates a switch or a loop
+continue	    Jumps out of a loop and starts at the top
+debugger	    Stops the execution of JavaScript, and calls (if available) the debugging function
+do ... while	Executes a block of statements, and repeats the block, while a condition is true
+for	            Marks a block of statements to be executed, as long as a condition is true
+function	    Declares a function
+if ... else	    Marks a block of statements to be executed, depending on a condition
+return	        Exits a function
+switch	        Marks a block of statements to be executed, depending on different cases
+try ... catch	Implements error handling to a block of statements
+var	            Declares a variable
+-----------------------------------------
+Las Keywords de JavaScript son palabras reservadas y no puede usarse como nombres de variables
+-----------------------------------------
+JavaScript es Case Sensitive. Es decir anVar es diferente de anvar. OJO La Keyword var no se puede escribir Var o VAR no sera interpretado correctamente.
+-----------------------------------------
+El uso mas comun entre los programadores de JavaScript es el Lower Camel Case: firstName, lastName, etc.
+----------------------------------------
+JavaScript Operadores Aritmeticos
+Operator	Description
++	        Addition
+-	        Subtraction
+*	        Multiplication
+**      	Exponentiation (ES2016)
+/	        Division
+%	        Modulus (Division Remainder)
+++	        Increment
+--	        Decrement
+------------------------------------------
+JavaScript Operadores de Asignacion
+Operator	Example	    Same As
+=	        x = y	    x = y
++=	        x += y	    x = x + y
+-=	        x -= y	    x = x - y
+*=	        x *= y	    x = x * y
+/=	        x /= y	    x = x / y
+%=	        x %= y	    x = x % y
+**=	        x **= y	    x = x ** y Esta es experimental de ES7
+
+SI INTENTAS ASIGNAR UN NUMERO Y UN STRING EL RESULTADO SERA UN STRING
+------------------------------------------
+JavaScript Operadores de Comparacion
+Operator	Description
+==      	equal to
+===     	equal value and equal type
+!=      	not equal
+!==	        not equal value or not equal type
+>	        greater than
+<	        less than
+>=	        greater than or equal to
+<=	        less than or equal to
+?	        ternary operator
+------------------------------------------
+JavaScript Operadores Logicos
+Operator	Description
+&&	        logical and
+||	        logical or
+!	        logical not
+-----------------------------------------
+JavaScript Operadores de Tipo
+Operator	Description
+typeof	    Returns the type of a variable
+instanceof	Returns true if an object is an instance of an object type
+-----------------------------------------
+JavaScript Operadores de Bits
+Operator	Description	            Example	Same as	     Result	 Decimal
+&	        AND	                    5 & 1	0101 & 0001	 0001	 1
+|	        OR	                    5 | 1	0101 | 0001	 0101	 5
+~	        NOT	                    ~ 5	    ~0101	     1010	 10
+^	        XOR	                    5 ^ 1	0101 ^ 0001	 0100	 4
+<<	        Zero fill left shift    5 << 1	0101 << 1	 1010	 10
+>>	        Signed right shift	    5 >> 1	0101 >> 1	 0010	 2
+>>>	        Zero fill right shift	5 >>> 1	0101 >>> 1	 0010	 2
+----------------------------------------
+
